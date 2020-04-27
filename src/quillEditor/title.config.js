@@ -48,21 +48,30 @@ const titleConfig = [
   { selector: '.ql-size .ql-picker-item[data-value="huge"]', title: '超大号' },
   { selector: '.ql-size .ql-picker-item:nth-child(2)', title: '标准' },
   { selector: '.ql-align .ql-picker-item:first-child', title: '居左对齐' },
-  { selector: '.ql-align .ql-picker-item[data-value="center"]', title: '居中对齐' },
-  { selector: '.ql-align .ql-picker-item[data-value="right"]', title: '居右对齐' },
-  { selector: '.ql-align .ql-picker-item[data-value="justify"]', title: '两端对齐' },
-];
+  {
+    selector: '.ql-align .ql-picker-item[data-value="center"]',
+    title: '居中对齐',
+  },
+  {
+    selector: '.ql-align .ql-picker-item[data-value="right"]',
+    title: '居右对齐',
+  },
+  {
+    selector: '.ql-align .ql-picker-item[data-value="justify"]',
+    title: '两端对齐',
+  },
+]
 
 function addQuillTitleTip() {
-  const toolBar = document.querySelector('.ql-toolbar');
-  titleConfig.forEach((element) => {
-    let tip = toolBar.querySelector(`.ql-formats ${element.selector}`);
+  const toolBar = document.querySelector('.ql-toolbar')
+  titleConfig.forEach(element => {
+    let tip = toolBar.querySelector(`.ql-formats ${element.selector}`)
     if (tip) {
-      tip.setAttribute('title', element.title);
+      tip.setAttribute('title', element.title)
     }
-  });
-};
+  })
+}
 
 export default {
   addQuillTitleTip,
-};
+}

@@ -1,7 +1,4 @@
-import MediaMixin from './media';
-import FullScreenMixin from './fullscreen';
+import MediaMixin from './media'
+import FullScreenMixin from './fullscreen'
 
-export default [
-  MediaMixin,
-  FullScreenMixin,
-];
+export default [MediaMixin, FullScreenMixin]

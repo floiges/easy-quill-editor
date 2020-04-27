@@ -3,15 +3,15 @@ export default {
   data() {
     return {
       isFullScreen: false,
-    };
+    }
   },
   methods: {
     fullScreenHandler(value) {
       if (value) {
-        this.isFullScreen = !this.isFullScreen;
+        this.isFullScreen = !this.isFullScreen
       } else {
-        this.quill.format('fullscreen', false);
+        this.quill.format('fullscreen', false)
       }
     },
   },
-};
+}
